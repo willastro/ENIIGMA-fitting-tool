@@ -1,0 +1,10 @@
+H$_2$O:CH$_4$:10:0 1
+H$_2$O:40K 1
+H$_2$O:CH$_3$OH:CO:NH$_3$:120K:NASA 1
+CH$_3$OH 5
+H$_2$O:NH$_3$:CO$_2$:CH$_4$:10:1:1:1:72K:b 1
+H$_2$O:CH$_3$OH:CO:NH$_3$:100K:NASA 1
+HNCO:NH$_3$ 1
+d:NH$_3$:CH$_3$OH:50:10K:I10m:Baselined 1
+CO:CH$_3$OH:10K 1
+CO:NH$_3$:10K 1

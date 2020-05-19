@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ENIIGMA.Continuum package &mdash; ENIIGMA code 0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ENIIGMA code
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../beforeyoubegin.html">Before you start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Import_modules.html">Importing modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ENIIGMA code</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>ENIIGMA.Continuum package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/ENIIGMA.Continuum.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eniigma-continuum-package">
+<h1>ENIIGMA.Continuum package<a class="headerlink" href="#eniigma-continuum-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ENIIGMA.Continuum.Fit">
+<span id="eniigma-continuum-fit-module"></span><h2>ENIIGMA.Continuum.Fit module<a class="headerlink" href="#module-ENIIGMA.Continuum.Fit" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ENIIGMA.Continuum.Fit.BB_func">
+<code class="sig-prename descclassname">ENIIGMA.Continuum.Fit.</code><code class="sig-name descname">BB_func</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lam</span></em>, <em class="sig-param"><span class="n">pars</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.Continuum.Fit.BB_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blackbody function used for spectral decomposition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lam</strong> (<em>‘numpy.ndarray’</em>) – The x axis used in the sepctral decomposition. E.g. the wavelenght.</p></li>
+<li><p><strong>pars</strong> (<em>‘numpy.ndarray’</em>) – Two parameters used in the blackbody function. They are the temperature T and the scaling factor C. E.g. [T, C].</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Blackbody funciton.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.Continuum.Fit.Continuum_BB">
+<code class="sig-prename descclassname">ENIIGMA.Continuum.Fit.</code><code class="sig-name descname">Continuum_BB</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em>, <em class="sig-param"><span class="n">xmin</span></em>, <em class="sig-param"><span class="n">xmax</span></em>, <em class="sig-param"><span class="n">range_limits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guess</span><span class="o">=</span><span class="default_value">500, 1e-18, 200, 3e-16</span></em>, <em class="sig-param"><span class="n">guess_view</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.Continuum.Fit.Continuum_BB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the continuum of the Spectral Energy Distribution (SED) using the polynomial fitting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>‘str’</em>) – Three columns file containing the wavelength in units of micrometers, the flux in units of Jansky and the flux error.</p></li>
+<li><p><strong>xmin, xmax</strong> (<em>‘float’</em>) – Intervals used to calculate the continuum in units of micrometers.</p></li>
+<li><p><strong>order</strong> (<em>‘float’</em>) – Polynomial order.</p></li>
+<li><p><strong>range_limits</strong> (<em>‘numpy.ndarray’</em>) – Ranges adopted for the continuum in units of micrometers. E.g. [[2.,3.], [8.,9]]. The funtion will take only these intervals to perform the fit.
+The rest of the spectrum will be masked.
+Default: None</p></li>
+<li><p><strong>guess</strong> (<em>‘numpy.ndarray’</em>) – Initial guesses for the blackbody continuum calculation.</p></li>
+<li><p><strong>guess_view</strong> (<em>‘bool’</em>) – Show the initial guess on the plot.
+Default: False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>ASCII files</em></p></li>
+<li><p><em>Flux_filename.flux (units of W cm-2)</em></p></li>
+<li><p><em>BB_Cont_filename.cont (units of W cm-2)</em></p></li>
+<li><p><em>Optical_depth_filename.od</em></p></li>
+<li><p><em>Continuum_filename.pdf</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.Continuum.Fit.Continuum_poly">
+<code class="sig-prename descclassname">ENIIGMA.Continuum.Fit.</code><code class="sig-name descname">Continuum_poly</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em>, <em class="sig-param"><span class="n">xmin</span></em>, <em class="sig-param"><span class="n">xmax</span></em>, <em class="sig-param"><span class="n">order</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">range_limits</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.Continuum.Fit.Continuum_poly" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the continuum of the Spectral Energy Distribution (SED) using the polynomial fitting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>‘str’</em>) – Three columns file containing the wavelength in units of micrometers, the flux in units of Jansky and the flux error.</p></li>
+<li><p><strong>xmin, xmax</strong> (<em>‘float’</em>) – Intervals used to calculate the continuum in units of micrometers.</p></li>
+<li><p><strong>order</strong> (<em>‘float’</em>) – Polynomial order.</p></li>
+<li><p><strong>range_limits</strong> (<em>‘numpy.ndarray’</em>) – Ranges adopted for the continuum in units of micrometers. E.g. [[2.,3.], [8.,9]]. The funtion will take only these intervals to perform the fit.
+The rest of the spectrum will be masked.
+Default: None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>ASCII files</em></p></li>
+<li><p><em>Flux_filename.flux (units of W cm-2)</em></p></li>
+<li><p><em>Poly_Cont_filename.cont (units of W cm-2)</em></p></li>
+<li><p><em>Optical_depth_filename.od</em></p></li>
+<li><p><em>Continuum_filename.pdf</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.Continuum.Fit.find_nearest">
+<code class="sig-prename descclassname">ENIIGMA.Continuum.Fit.</code><code class="sig-name descname">find_nearest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.Continuum.Fit.find_nearest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find nearest value of a given number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> (<em>‘numpy.ndarray’</em>) – Vector with the value of interest.</p></li>
+<li><p><strong>value</strong> (<em>‘float’</em>) – Value of interest.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Nearest value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.Continuum.Fit.get_line_number2">
+<code class="sig-prename descclassname">ENIIGMA.Continuum.Fit.</code><code class="sig-name descname">get_line_number2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">matrix</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.Continuum.Fit.get_line_number2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function used to get the line number of a value in a array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>‘float’</em>) – Value of interest.</p></li>
+<li><p><strong>matrix</strong> (<em>‘numpy.ndarray’</em>) – Vector with the value of interest.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Index</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.Continuum.Fit.one_BB">
+<code class="sig-prename descclassname">ENIIGMA.Continuum.Fit.</code><code class="sig-name descname">one_BB</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lam</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">pars</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.Continuum.Fit.one_BB" title="Permalink to this definition">¶</a></dt>
+<dd><p>One blackbody function used for spectral decomposition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lam</strong> (<em>‘numpy.ndarray’</em>) – The x axis used in the sepctral decomposition. E.g. the wavelenght.</p></li>
+<li><p><strong>pars</strong> (<em>‘numpy.ndarray’</em>) – Two parameters used in the blackbody function. They are the temperature T and the scaling factor C. E.g. [T, C].</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>One blackbody component.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.Continuum.Fit.three_BB">
+<code class="sig-prename descclassname">ENIIGMA.Continuum.Fit.</code><code class="sig-name descname">three_BB</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lam</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">pars</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.Continuum.Fit.three_BB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Composition of three blackbody functions used for spectral decomposition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lam</strong> (<em>‘numpy.ndarray’</em>) – The x axis used in the sepctral decomposition. E.g. the wavelenght.</p></li>
+<li><p><strong>pars</strong> (<em>‘numpy.ndarray’</em>) – Two parameters used in the blackbody function. They are the temperature T and the scaling factor C. E.g. [T, C].</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Sum of three blackbody functions</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.Continuum.Fit.two_BB">
+<code class="sig-prename descclassname">ENIIGMA.Continuum.Fit.</code><code class="sig-name descname">two_BB</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lam</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">pars</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.Continuum.Fit.two_BB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Composition of two blackbody functions used for spectral decomposition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lam</strong> (<em>‘numpy.ndarray’</em>) – The x axis used in the sepctral decomposition. E.g. the wavelenght.</p></li>
+<li><p><strong>pars</strong> (<em>‘numpy.ndarray’</em>) – Two parameters used in the blackbody function. They are the temperature T and the scaling factor C. E.g. [T, C].</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Sum of two blackbody functions</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ENIIGMA.Continuum">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ENIIGMA.Continuum" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, ENIIGMA Team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

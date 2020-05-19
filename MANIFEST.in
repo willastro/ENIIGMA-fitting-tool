@@ -1,0 +1,5 @@
+include ENIIGMA/ICE_LIB/MI_ICES/*.dat
+include ENIIGMA/ICE_LIB/MT_ICES/*.dat
+include ENIIGMA/ICE_LIB/PT_ICES/*.dat
+include ENIIGMA/ICE_LIB/P_ICES/*.dat
+include ENIIGMA/ICE_LIB/Silicate/*.out

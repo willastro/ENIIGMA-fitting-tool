@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ENIIGMA.GA package &mdash; ENIIGMA code 0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ENIIGMA code
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../beforeyoubegin.html">Before you start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Import_modules.html">Importing modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Examples.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ENIIGMA code</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>ENIIGMA.GA package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/source/ENIIGMA.GA.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eniigma-ga-package">
+<h1>ENIIGMA.GA package<a class="headerlink" href="#eniigma-ga-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ENIIGMA.GA.GA_module_pyev">
+<span id="eniigma-ga-ga-module-pyev-module"></span><h2>ENIIGMA.GA.GA_module_pyev module<a class="headerlink" href="#module-ENIIGMA.GA.GA_module_pyev" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ENIIGMA.GA.GA_module_pyev.gamod">
+<code class="sig-prename descclassname">ENIIGMA.GA.GA_module_pyev.</code><code class="sig-name descname">gamod</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">new_tau</span></em>, <em class="sig-param"><span class="n">etau</span></em>, <em class="sig-param"><span class="n">DIR1</span></em>, <em class="sig-param"><span class="n">DIR2</span></em>, <em class="sig-param"><span class="n">Stats</span><span class="o">=</span><span class="default_value">'False'</span></em>, <em class="sig-param"><span class="n">freq_stat</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">gen</span><span class="o">=</span><span class="default_value">100</span></em>, <em class="sig-param"><span class="n">ga_min</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">ga_max</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">mutp</span><span class="o">=</span><span class="default_value">0.01</span></em>, <em class="sig-param"><span class="n">popsize</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">cc</span><span class="o">=</span><span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.GA_module_pyev.gamod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Genetic Algorithm Module dedicated to the optmiziation. All these parameters are automatically taken from the file ‘optmize.py’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>new_tau</strong> (<em>‘numpy.ndarray’</em>) – Optical depth array.</p></li>
+<li><p><strong>etau</strong> (<em>‘numpy.ndarray’</em>) – Optical depth error.</p></li>
+<li><p><strong>DIR1, DIR2</strong> (<em>‘str’</em>) – Paths to directories where the files are stored.</p></li>
+<li><p><strong>Stats</strong> (<em>‘bool’</em>) – If ‘True’ the genetic algorithm statistic is shown.</p></li>
+<li><p><strong>freq_stats</strong> (<em>‘int’</em>) – Show the genetic algorithm statistics at a given number of generations.
+Default: 10</p></li>
+<li><p><strong>gen</strong> (<em>‘int’</em>) – Number of generations in the genetic algorithm optimization.
+Default: 100</p></li>
+<li><p><strong>mutp</strong> (<em>‘float’</em>) – Mutation rate.
+Default: 0.01</p></li>
+<li><p><strong>popsize</strong> (<em>‘int’</em>) – Population size.
+Default = 50</p></li>
+<li><p><strong>cc</strong> (<em>‘int’</em>) – counter for combinations.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>File ‘Name_list.txt’ list the files according to the combination.</em></p></li>
+<li><p><em>File ‘best_comb.csv’ contains the chi-square values of all combination.</em></p></li>
+<li><p><em>File ‘Best_score.txt’ contains the best chi-square among all combination.</em></p></li>
+<li><p><em>File ‘Best_values.txt’ contains the best genes (weights) among all combination.</em></p></li>
+<li><p><em>File ‘comb_score.txt’ contains the chi-squares over all combination.</em></p></li>
+<li><p><em>File ‘Pyevolve.db’ contains the genetic algorithm statistics over all combination.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ENIIGMA.GA.Plot_fitting">
+<span id="eniigma-ga-plot-fitting-module"></span><h2>ENIIGMA.GA.Plot_fitting module<a class="headerlink" href="#module-ENIIGMA.GA.Plot_fitting" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ENIIGMA.GA.Plot_fitting.plot">
+<code class="sig-prename descclassname">ENIIGMA.GA.Plot_fitting.</code><code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">DIR</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.Plot_fitting.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to read the global minumum outputs and plot the result</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>‘str’</em>) – Path to the files. Taken automatically.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ENIIGMA.GA.check_ga">
+<span id="eniigma-ga-check-ga-module"></span><h2>ENIIGMA.GA.check_ga module<a class="headerlink" href="#module-ENIIGMA.GA.check_ga" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ENIIGMA.GA.check_ga.check">
+<code class="sig-prename descclassname">ENIIGMA.GA.check_ga.</code><code class="sig-name descname">check</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">combination</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">option</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">savepdf</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.check_ga.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show the fitness function statistic after the genetic algorithm optimization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>combination</strong> (<em>‘int’</em>) – Set the combination to check the GA optmization.</p></li>
+<li><p><strong>option</strong> (<em>‘int’</em>)</p></li>
+<li><p><strong>-1                  Error bars graph (raw scores).</strong></p></li>
+<li><p><strong>-2                  Error bars graph (fitness scores).</strong></p></li>
+<li><p><strong>-3                  Max/min/avg/std. dev. graph (raw scores).</strong></p></li>
+<li><p><strong>-4                  Max/min/avg graph (fitness scores).</strong></p></li>
+<li><p><strong>-5                  Raw and Fitness min/max difference graph.</strong></p></li>
+<li><p><strong>-6                  Compare best raw score of two or more evolutions (you</strong> – must specify the identify comma-separed list with
+–identify (-i) parameter, like ‘one, two, three’),
+the maximum is 6 items.</p></li>
+<li><p><strong>-7                  Compare best fitness score of two or more evolutions</strong> – (you must specify the identify comma-separed list with
+–identify (-i) parameter, like ‘one, two, three’),
+the maximum is 6 items.</p></li>
+<li><p><strong>-8                  Show a heat map of population raw score distribution</strong> – between generations.</p></li>
+<li><p><strong>-9                  Show a heat map of population fitness score</strong> – distribution between generations.</p></li>
+<li><p><strong>savepdf</strong> (<em>‘bool’</em>) – If ‘True’ an pdf output file will be saved. If ‘False’, the graph will be shown in a matplotlib interface.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>GA statistic for a given combination.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.GA.check_ga.top_five_raw">
+<code class="sig-prename descclassname">ENIIGMA.GA.check_ga.</code><code class="sig-name descname">top_five_raw</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">savepdf</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.check_ga.top_five_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compares the non-scaled fitness function among the five best combinations after the genetic algorithm optimization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>savepdf</strong> (<em>‘bool’</em>) – If ‘True’ an pdf output file will be saved. If ‘False’, the graph will be shown in a matplotlib interface.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>GA statistic comparison.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.GA.check_ga.top_five_scaled">
+<code class="sig-prename descclassname">ENIIGMA.GA.check_ga.</code><code class="sig-name descname">top_five_scaled</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">savepdf</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.check_ga.top_five_scaled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compares the scaled fitness function among the five best combinations after the genetic algorithm optimization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>savepdf</strong> (<em>‘bool’</em>) – If ‘True’ an pdf output file will be saved. If ‘False’, the graph will be shown in a matplotlib interface.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>GA statistic comparison.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ENIIGMA.GA.create">
+<span id="eniigma-ga-create-module"></span><h2>ENIIGMA.GA.create module<a class="headerlink" href="#module-ENIIGMA.GA.create" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ENIIGMA.GA.create.create_R2">
+<code class="sig-prename descclassname">ENIIGMA.GA.create.</code><code class="sig-name descname">create_R2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.create.create_R2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to merge ascii files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_list</strong> (<em>‘str’</em>) – Path to the files. Taken automatically.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Merged file</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>all_T.txt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.GA.create.create_file2">
+<code class="sig-prename descclassname">ENIIGMA.GA.create.</code><code class="sig-name descname">create_file2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.create.create_file2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to merge ascii files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_list</strong> (<em>‘str’</em>) – Path to the files. Taken automatically.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Merged file</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output_file.txt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.GA.create.create_file2f">
+<code class="sig-prename descclassname">ENIIGMA.GA.create.</code><code class="sig-name descname">create_file2f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.create.create_file2f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to merge ascii files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_list</strong> (<em>‘str’</em>) – Path to the files. Taken automatically.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Merged file</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output_file_final.txt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.GA.create.create_file2four">
+<code class="sig-prename descclassname">ENIIGMA.GA.create.</code><code class="sig-name descname">create_file2four</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.create.create_file2four" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to merge ascii files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_list</strong> (<em>‘str’</em>) – Path to the files. Taken automatically.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Merged file</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output_file4.txt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.GA.create.create_interp2">
+<code class="sig-prename descclassname">ENIIGMA.GA.create.</code><code class="sig-name descname">create_interp2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.create.create_interp2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to merge ascii files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_list</strong> (<em>‘str’</em>) – Path to the files. Taken automatically.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Merged file</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>interp_all.txt</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ENIIGMA.GA.create3">
+<span id="eniigma-ga-create3-module"></span><h2>ENIIGMA.GA.create3 module<a class="headerlink" href="#module-ENIIGMA.GA.create3" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ENIIGMA.GA.create3.create_R3">
+<code class="sig-prename descclassname">ENIIGMA.GA.create3.</code><code class="sig-name descname">create_R3</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.create3.create_R3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to merge ascii files in Python 3.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_list</strong> (<em>‘str’</em>) – Path to the files. Taken automatically.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Merged file</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>all_R.txt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.GA.create3.create_file3">
+<code class="sig-prename descclassname">ENIIGMA.GA.create3.</code><code class="sig-name descname">create_file3</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.create3.create_file3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to merge ascii files in Python 3.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_list</strong> (<em>‘str’</em>) – Path to the files. Taken automatically.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Merged file</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output_file.txt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.GA.create3.create_file3f">
+<code class="sig-prename descclassname">ENIIGMA.GA.create3.</code><code class="sig-name descname">create_file3f</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.create3.create_file3f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to merge ascii files in Python 3.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_list</strong> (<em>‘str’</em>) – Path to the files. Taken automatically.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Merged file</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output_file_final.txt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.GA.create3.create_file3four">
+<code class="sig-prename descclassname">ENIIGMA.GA.create3.</code><code class="sig-name descname">create_file3four</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.create3.create_file3four" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to merge ascii files in Python 3.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_list</strong> (<em>‘str’</em>) – Path to the files. Taken automatically.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Merged file</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>output_file4.txt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.GA.create3.create_interp3">
+<code class="sig-prename descclassname">ENIIGMA.GA.create3.</code><code class="sig-name descname">create_interp3</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.create3.create_interp3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to merge ascii files in Python 3.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_list</strong> (<em>‘str’</em>) – Path to the files. Taken automatically.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Merged file</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>interp_all.txt</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ENIIGMA.GA.optimize">
+<span id="eniigma-ga-optimize-module"></span><h2>ENIIGMA.GA.optimize module<a class="headerlink" href="#module-ENIIGMA.GA.optimize" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ENIIGMA.GA.optimize.ENIIGMA">
+<code class="sig-prename descclassname">ENIIGMA.GA.optimize.</code><code class="sig-name descname">ENIIGMA</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">od_file</span></em>, <em class="sig-param"><span class="n">xmin</span></em>, <em class="sig-param"><span class="n">xmax</span></em>, <em class="sig-param"><span class="n">list_sp</span></em>, <em class="sig-param"><span class="n">n_points</span><span class="o">=</span><span class="default_value">500</span></em>, <em class="sig-param"><span class="n">group_comb</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="n">skip</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">pathlib</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">factor1</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">factor2</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">dtype</span><span class="o">=</span><span class="default_value">'Obs'</span></em>, <em class="sig-param"><span class="n">St</span><span class="o">=</span><span class="default_value">'False'</span></em>, <em class="sig-param"><span class="n">freqs</span><span class="o">=</span><span class="default_value">10</span></em>, <em class="sig-param"><span class="n">gen</span><span class="o">=</span><span class="default_value">100</span></em>, <em class="sig-param"><span class="n">ga_min</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">ga_max</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">mutp</span><span class="o">=</span><span class="default_value">0.01</span></em>, <em class="sig-param"><span class="n">popsize</span><span class="o">=</span><span class="default_value">50</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.optimize.ENIIGMA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to combine files in the genetic algorithm spectral decomposition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>od_file</strong> (<em>‘str’</em>) – Optical depth file.</p></li>
+<li><p><strong>xmin, xmax</strong> (<em>‘float’</em>) – Range used in the spectral decomposition.</p></li>
+<li><p><strong>list_sp</strong> (<em>‘str’</em>) – List of ice data used as initial guess.</p></li>
+<li><p><strong>n_points</strong> (<em>‘float’</em>) – Number of data points used for interpolating the data.</p></li>
+<li><p><strong>group_comb</strong> (<em>‘float’</em>) – Value used to group species in the final part of the optimization.
+Default = 5. E.g. 6 files will be combined in group of 5 without repetition. In total, 6 combination will be performed.</p></li>
+<li><p><strong>skip</strong> (<em>‘bool’</em>) – Default: False
+If True, the chi-square selection of files will not be performed.</p></li>
+<li><p><strong>pathlib</strong> (<em>‘str’</em>) – Directory of ice data library.
+Default: site-packages in the python pathway.</p></li>
+<li><p><strong>factor1</strong> (<em>‘int’</em>) – Select files factor1 times higher than the minimum chi-square in the first performance, namely, only pure ice data.
+Default: 2</p></li>
+<li><p><strong>factor2</strong> (<em>‘int’</em>) – Select files factor1 times higher than the minimum chi-square in the second performance, namely, pure and mixture ice data.
+Default: 2</p></li>
+<li><p><strong>dtype</strong> (<em>‘str’</em>) – If ‘Obs’ use the observational optical depth.
+If ‘Lab’ use the experimental absobance data.
+Default: ‘Obs’</p></li>
+<li><p><strong>St</strong> (<em>‘bool’</em>) – If ‘True’ shows the genetic algorithm statistic.
+Default: ‘False’</p></li>
+<li><p><strong>freqs</strong> (<em>‘int’</em>) – Show the genetic algorithm statistics at a given number of generations.
+Default: 10</p></li>
+<li><p><strong>gen</strong> (<em>‘int’</em>) – Number of generations in the genetic algorithm optimization.
+Default: 100</p></li>
+<li><p><strong>mutp</strong> (<em>‘float’</em>) – Mutation rate.
+Default: 0.01</p></li>
+<li><p><strong>popsize</strong> (<em>‘int’</em>) – Population size.
+Default = 50</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>Create a directory tree where the output files will be stored.</em></p></li>
+<li><p><em>Folder ‘Standard’ stores the initial guess files.</em></p></li>
+<li><p><em>Folder ‘New_standard’ stores the files selected after the initial guess.</em></p></li>
+<li><p><em>Folder ‘Mutation’ stores files based on the ‘New_standard’ folder.</em></p></li>
+<li><p><em>Folder ‘Workspace’ stores output files regarding the genetic algorithm optimization.</em></p></li>
+<li><p><em>File ‘best_comb.csv’ contains the chi-square values of all combination.</em></p></li>
+<li><p><em>File ‘Best_score.txt’ contains the best chi-square among all combination.</em></p></li>
+<li><p><em>File ‘Best_values.txt’ contains the best genes (weights) among all combination.</em></p></li>
+<li><p><em>File ‘comb_score.txt’ contains the chi-squares over all combination.</em></p></li>
+<li><p><em>File ‘Pyevolve.db’ contains the genetic algorithm statistics over all combination.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.GA.optimize.find_nearest">
+<code class="sig-prename descclassname">ENIIGMA.GA.optimize.</code><code class="sig-name descname">find_nearest</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">array</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.optimize.find_nearest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find nearest value of a given number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> (<em>‘numpy.ndarray’</em>) – Vector with the value of interest.</p></li>
+<li><p><strong>value</strong> (<em>‘float’</em>) – Value of interest.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Nearest value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ENIIGMA.GA.optimize.get_line_number2">
+<code class="sig-prename descclassname">ENIIGMA.GA.optimize.</code><code class="sig-name descname">get_line_number2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">matrix</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.optimize.get_line_number2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function used to get the line number of a value in a array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>‘float’</em>) – Value of interest.</p></li>
+<li><p><strong>matrix</strong> (<em>‘numpy.ndarray’</em>) – Vector with the value of interest.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Index</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ENIIGMA.GA.sortpandas">
+<span id="eniigma-ga-sortpandas-module"></span><h2>ENIIGMA.GA.sortpandas module<a class="headerlink" href="#module-ENIIGMA.GA.sortpandas" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="ENIIGMA.GA.sortpandas.sortt">
+<code class="sig-prename descclassname">ENIIGMA.GA.sortpandas.</code><code class="sig-name descname">sortt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ENIIGMA.GA.sortpandas.sortt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to sort the ‘Best_comb.csv file by the chi_square value.’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file</strong> (<em>‘str’</em>) – Path to the ‘Best_comb.csv’ file. Taken automatically.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>‘Best_comb.csv’ file sorted by the chi_square.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ENIIGMA.GA">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ENIIGMA.GA" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, ENIIGMA Team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

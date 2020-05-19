@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Examples &mdash; ENIIGMA code 0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Importing modules" href="Import_modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ENIIGMA code
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="beforeyoubegin.html">Before you start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Import_modules.html">Importing modules</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#polynomial-continuum">Polynomial continuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#blackbody-continuum">Blackbody continuum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ga-decomposition">GA decomposition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#checking-out-the-ga-fitness-evolution">Checking out the GA fitness evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#evaluating-the-recurrence-of-the-ice-components">Evaluating the recurrence of the ice components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculating-confidence-intervals-and-ice-column-densities">Calculating confidence intervals and ice column densities</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ENIIGMA code</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Examples</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Examples.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>In this short tutorial is shown the results of the ENIIGMA code applied to the YSO SVS 4-9, located in the SVS4 cluster at the Serpens molecular cloud.</p>
+<p>The L-band spectrum data was taken from the VLT-ISAAC public database via <a class="reference external" href="http://www.stsci.edu/~pontoppi/ISAAC_ARCHIVE_PUBLIC.tar.gz">this link</a>. The near-IR
+photometric data is available in the <a class="reference external" href="https://irsa.ipac.caltech.edu/Missions/2mass.html">2MASS catalog</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These examples aim to show the code’s functionalities and should not be taken as an accurate scientific result!</p>
+</div>
+<div class="section" id="polynomial-continuum">
+<h2>Polynomial continuum<a class="headerlink" href="#polynomial-continuum" title="Permalink to this headline">¶</a></h2>
+<p>In order to calculate the continuum SED an calculate the optical depth using the polynomial function, we can use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ENIIGMA.Continuum</span> <span class="kn">import</span> <span class="n">Fit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;/Users/will_rocha_starplan/eniigma_doc/doc/Tutorial/svs49.txt&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Fit</span><span class="o">.</span><span class="n">Continuum_poly</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="mf">1.24</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="mf">2.</span><span class="p">,</span> <span class="n">range_limits</span><span class="o">=</span><span class="p">[[</span><span class="mf">1.24</span><span class="p">,</span> <span class="mf">2.85</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.8</span><span class="p">,</span> <span class="mf">4.</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>The parameters indicate that the continuum is calculated in the range between 1.24 to 4.0 microns, using a second-order polynomial function constrained by the ranges
+between 1.24-2.85 and 3.8-4. microns.</p>
+<p>The results are shown below:</p>
+<div class="align-center figure" id="id1">
+<a class="reference internal image-reference" href="_images/Continuum_svs49_poly.pdf"><img alt="alternate text" src="_images/Continuum_svs49_poly.pdf" style="width: 500px; height: 500px;" /></a>
+<p class="caption"><span class="caption-text">Continuum SED, SVS4-9 spectrum on the top panel, the optical depth on the bottom panel.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>As you can note, the function fails to trace the continuum in the near-IR regime, althout it gives an acceptable continuum in the L-band interval. Below the same
+procedure is repeated using the blackbody function.</p>
+</div>
+<div class="section" id="blackbody-continuum">
+<h2>Blackbody continuum<a class="headerlink" href="#blackbody-continuum" title="Permalink to this headline">¶</a></h2>
+<p>The Python commands to call the BB continuum function is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ENIIGMA.Continuum</span> <span class="kn">import</span> <span class="n">Fit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Fit</span><span class="o">.</span><span class="n">Continuum_BB</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="mf">1.24</span><span class="p">,</span> <span class="mf">4.</span><span class="p">,</span> <span class="n">range_limits</span><span class="o">=</span><span class="p">[[</span><span class="mf">1.25</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.8</span><span class="p">,</span> <span class="mf">4.</span><span class="p">]],</span> <span class="n">guess</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mf">1e-20</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>As used in the polynomial continuum case, the intervals are the same. The difference is that one BB function is used. The initial guesses to fit the spectrum are
+the temperature of 1000 K and a scale factor of 1e-20. The results are shown below:</p>
+<div class="align-center figure" id="id2">
+<a class="reference internal image-reference" href="_images/Continuum_svs49_BB.pdf"><img alt="alternate text" src="_images/Continuum_svs49_BB.pdf" style="width: 500px; height: 500px;" /></a>
+<p class="caption"><span class="caption-text">Continuum SED, SVS4-9 spectrum on the top panel, the optical depth on the bottom panel.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="ga-decomposition">
+<h2>GA decomposition<a class="headerlink" href="#ga-decomposition" title="Permalink to this headline">¶</a></h2>
+<p>The spectral decomposition using the genetic algorithm module reads the output from the polynomial continuum and BB function as well as an external file not calculated by the ENIIGMA code.
+As example, let us use the output spectrum from the ENIIGMA code.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ENIIGMA.GA</span> <span class="kn">import</span> <span class="n">optimize</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;Optical_depth_svs49.od&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">list_sp</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;H2O_40K&#39;</span><span class="p">,</span> <span class="s1">&#39;H2O_NH3_CO2_CH4_10_1_1_1_72K_b&#39;</span><span class="p">,</span> <span class="s1">&#39;d_NH3_CH3OH_50_10K_I10m_Baselined&#39;</span><span class="p">,</span> <span class="s1">&#39;CO_NH3_10K&#39;</span><span class="p">,</span> <span class="s1">&#39;H2O_CH4_10_0.6_a_V3&#39;</span><span class="p">,</span> <span class="s1">&#39;CO_CH3OH_10K&#39;</span><span class="p">,</span> <span class="s1">&#39;HNCO_NH3&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">optimize</span><span class="o">.</span><span class="n">ENIIGMA</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="mf">2.84</span><span class="p">,</span> <span class="mf">4.</span><span class="p">,</span> <span class="n">list_sp</span><span class="p">,</span> <span class="n">group_comb</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">pathlib</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The optical depth used in this example is the file ‘Optical_depth_svs49.od’, and the initial guess for the laboratory data are listed in the list_sp variable.
+Once the files are set, the decomposition range is fixed for the interval between 2.84 and 4. microns, with a combination group of 3 experimental data in the final step of the code.
+The keyword ‘skip=False’ means that the entire procedure will be executed. ‘pathlib=None’ means that the ice library is read from the folder download with the code. It is stored in your
+Python directory.</p>
+<p>In my laptop, 156 combinations were tested in a execution time of 75 seconds. The result is shown below:</p>
+<div class="align-center figure" id="id3">
+<a class="reference internal image-reference" href="_images/Final_plot.pdf"><img alt="alternate text" src="_images/Final_plot.pdf" style="width: 500px; height: 400px;" /></a>
+<p class="caption"><span class="caption-text">SVS 4-9 optical depth in black and the fitting model in green.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="checking-out-the-ga-fitness-evolution">
+<h2>Checking out the GA fitness evolution<a class="headerlink" href="#checking-out-the-ga-fitness-evolution" title="Permalink to this headline">¶</a></h2>
+<p>The evolution of the optimisation over the generations for the combinations can be checked in two different ways. First, the 5 best combinations can be checked via this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ENIIGMA.GA</span> <span class="kn">import</span> <span class="n">check_ga</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">check_ga</span><span class="o">.</span><span class="n">top_five_scaled</span><span class="p">(</span><span class="n">savepdf</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will show the 5 best scaled fitness function in the same graph as seen below:</p>
+<div class="align-center figure" id="id4">
+<a class="reference internal image-reference" href="_images/graph_eniigma_top_five_scaled.pdf"><img alt="alternate text" src="_images/graph_eniigma_top_five_scaled.pdf" style="width: 500px; height: 400px;" /></a>
+<p class="caption"><span class="caption-text">GA evolution check.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Other checking options are available via this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ENIIGMA.GA</span> <span class="kn">import</span> <span class="n">check_ga</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">check_ga</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">combination</span><span class="o">=</span><span class="mi">78</span><span class="p">,</span> <span class="n">option</span><span class="o">=-</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The figure below shows the evolution of the combination that gave the best solution, namely - 78.</p>
+<div class="align-center figure" id="id5">
+<a class="reference internal image-reference" href="_images/graph_eniigma_evol.pdf"><img alt="alternate text" src="_images/graph_eniigma_evol.pdf" style="width: 500px; height: 400px;" /></a>
+<p class="caption"><span class="caption-text">GA evolution check for the best combination.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>The population evolution can also be check over the generations and fitness function as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ENIIGMA.GA</span> <span class="kn">import</span> <span class="n">check_ga</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">check_ga</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="n">combination</span><span class="o">=</span><span class="mi">78</span><span class="p">,</span> <span class="n">option</span><span class="o">=-</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The result is shown below:</p>
+<div class="align-center figure" id="id6">
+<a class="reference internal image-reference" href="_images/graph_eniigma.pdf"><img alt="alternate text" src="_images/graph_eniigma.pdf" style="width: 500px; height: 400px;" /></a>
+<p class="caption"><span class="caption-text">Population check for the best combination.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="evaluating-the-recurrence-of-the-ice-components">
+<h2>Evaluating the recurrence of the ice components<a class="headerlink" href="#evaluating-the-recurrence-of-the-ice-components" title="Permalink to this headline">¶</a></h2>
+<p>The recurrence of the ice laboratory inside the confidence intervals can be addressed via pie charts. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ENIIGMA.Stats</span> <span class="kn">import</span> <span class="n">Pie_chart_plots</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Pie_chart_plots</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">sig_level</span><span class="o">=</span><span class="mf">9.</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="align-center figure" id="id7">
+<a class="reference internal image-reference" href="_images/Pie_chart.pdf"><img alt="alternate text" src="_images/Pie_chart.pdf" style="width: 600px; height: 400px;" /></a>
+<p class="caption"><span class="caption-text">Pie charts of the recurrence plots.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>The values are given in percentage and means how many time a specific data was repeated in order to contribute to the selected confidence interval.</p>
+</div>
+<div class="section" id="calculating-confidence-intervals-and-ice-column-densities">
+<h2>Calculating confidence intervals and ice column densities<a class="headerlink" href="#calculating-confidence-intervals-and-ice-column-densities" title="Permalink to this headline">¶</a></h2>
+<p>The confidence intervals can be visualised along with the spectral decomposition plot as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ENIIGMA.Stats</span> <span class="kn">import</span> <span class="n">Stats_Module</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Stats_Module</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">f_sig</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="align-center figure" id="id8">
+<a class="reference internal image-reference" href="_images/Stats-1.pdf"><img alt="alternate text" src="_images/Stats-1.pdf" style="width: 500px; height: 400px;" /></a>
+<p class="caption"><span class="caption-text">Triangle plot showing the confidence intervals.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<div class="align-center figure" id="id9">
+<a class="reference internal image-reference" href="_images/Stats-2.pdf"><img alt="alternate text" src="_images/Stats-2.pdf" style="width: 500px; height: 400px;" /></a>
+<p class="caption"><span class="caption-text">Optical depth and the minimum and maximum intervals.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<div class="align-center figure" id="id10">
+<a class="reference internal image-reference" href="_images/Stats-3.pdf"><img alt="alternate text" src="_images/Stats-3.pdf" style="width: 550px; height: 400px;" /></a>
+<p class="caption"><span class="caption-text">Optical depth decomposition indicating the used experimental data.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Import_modules.html" class="btn btn-neutral float-left" title="Importing modules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, ENIIGMA Team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

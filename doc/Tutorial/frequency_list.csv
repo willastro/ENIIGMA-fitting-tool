@@ -1,0 +1,11 @@
+name,freq
+d:NH$_3$:CH$_3$OH:50:10K:I10m:Baselined,3.0
+CO:NH$_3$:10K,3.0
+H$_2$O:40K,4.0
+HNCO:NH$_3$,4.0
+CO:CH$_3$OH:10K,4.0
+H$_2$O:CH$_4$:10:0,6.0
+CH$_3$OH,9.2
+H$_2$O:CH$_3$OH:CO:NH$_3$:120K:NASA,14.0
+H$_2$O:CH$_3$OH:CO:NH$_3$:100K:NASA,14.0
+H$_2$O:NH$_3$:CO$_2$:CH$_4$:10:1:1:1:72K:b,21.0
