@@ -23,7 +23,7 @@ between 1.24-2.85 and 3.8-4. microns.
 
 The results are shown below:
 
-.. figure:: /PNG_figs/Continuum_svs49_poly.png
+.. figure:: PNG_figs/Continuum_svs49_poly.png
     :width: 500px
     :align: center
     :height: 500px
