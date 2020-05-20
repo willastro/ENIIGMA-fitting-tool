@@ -8,7 +8,7 @@ Welcome to ENIIGMA code's documentation!
 Introduction
 ------------
 
-ENIIGMA is a Python code for the d**E**compositio**N** of **I**nfrared **I**ce spectra using **G**enetic **M**odelling **A**lgorithm.
+ENIIGMA is a Python code for the d(**E**)compositio(**N**) of (**I**)nfrared (**I**)ce spectra using (**G**)enetic (**M**)odelling (**A**)lgorithm.
 
 An internal library containing infrared spectrum of ice data taken from public databases is used to deompose the input spectra.
 
