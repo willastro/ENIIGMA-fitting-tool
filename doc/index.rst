@@ -23,8 +23,7 @@ Features:
 -----------
 
 The ENIIGMA code is focused on the spectral decomposition of the observational IR spectra containing absorption ice features. So far, the *Spitzer* and VLT/ISAAC spectra
-have been successfully tested. In this regard, this code will be useful to provide an unbiased analysis of the upcoming *James Webb Space Telescope - JWST* data. Nevertheless,
-laboratory ice spectra can be decomposed using the ENIIGMA code.
+have been successfully tested. In this regard, this code will be useful to provide an unbiased analysis of the upcoming *James Webb Space Telescope - JWST* data.
 
 Citing ENIIGMA
 ------------
