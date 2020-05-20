@@ -72,7 +72,7 @@ As example, let us use the output spectrum from the ENIIGMA code.
 The optical depth used in this example is the file 'Optical_depth_svs49.od', and the initial guess for the laboratory data are listed in the list_sp variable.
 Once the files are set, the decomposition range is fixed for the interval between 2.84 and 4. microns, with a combination group of 3 experimental data in the final step of the code. 
 The keyword 'skip=False' means that the entire procedure will be executed. 'pathlib=None' means that the ice library is read from the folder download with the code. It is stored in your
-Python directory.
+Python directory. Alternatively you can download the ice library `here <https://drive.google.com/open?id=1yCPYwFgTnCgZcN1E6EfeI5dIGLpgj3fm>`_.
 
 In my laptop, 156 combinations were tested in a execution time of 75 seconds. The result is shown below:
 

@@ -34,3 +34,13 @@ The installation can be done by typing the following command in shell:
 	$cd Pyevolve
 	$pip3 install future
 	$sudo python setup.py install --
+
+Development version:
+-------------------------
+
+The ENIIGMA code can also be installed from GitHub:
+::
+	$git clone https://github.com/willastro/ENIIGMA-code.git
+	$cd ENIIGMA-code
+	$python setup.py install
+	$python setup.py install --user (for non-root privilegies)
