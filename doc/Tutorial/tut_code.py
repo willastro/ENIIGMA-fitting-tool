@@ -30,7 +30,7 @@ list_sp = ['H2O_40K', 'H2O_NH3_CO2_CH4_10_1_1_1_72K_b', 'd_NH3_CH3OH_50_10K_I10m
 #exit()
 #Statistic of generations for each combinations
 #check_ga.top_five_scaled(savepdf=True)
-check_ga.check(combination=26, option=-3, savepdf=False)
+#check_ga.check(combination=26, option=-3, savepdf=False)
 
 #exit()
 #Pie plot
@@ -40,5 +40,5 @@ check_ga.check(combination=26, option=-3, savepdf=False)
 #Stats_Module.stat(f_sig=2)
 
 #Check components and create histogram
-#Degen_plots.merge_components_cd()
-#Degen_plots.hist_plot()	
+Degen_plots.merge_components_cd()
+Degen_plots.hist_plot()	

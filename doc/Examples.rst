@@ -23,7 +23,7 @@ between 1.24-2.85 and 3.8-4. microns.
 
 The results are shown below:
 
-.. figure:: Continuum_svs49_poly.pdf
+.. figure:: /PNG_figs/Continuum_svs49_poly.png
     :width: 500px
     :align: center
     :height: 500px
@@ -47,7 +47,7 @@ The Python commands to call the BB continuum function is:
 As used in the polynomial continuum case, the intervals are the same. The difference is that one BB function is used. The initial guesses to fit the spectrum are
 the temperature of 1000 K and a scale factor of 1e-20. The results are shown below:
 
-.. figure:: Continuum_svs49_BB.pdf
+.. figure:: /PNG_figs/Continuum_svs49_BB.png
     :width: 500px
     :align: center
     :height: 500px
@@ -76,7 +76,7 @@ Python directory.
 
 In my laptop, 156 combinations were tested in a execution time of 75 seconds. The result is shown below:
 
-.. figure:: Final_plot.pdf
+.. figure:: /PNG_figs/Final_plot.png
     :width: 500px
     :align: center
     :height: 400px
@@ -95,7 +95,7 @@ The evolution of the optimisation over the generations for the combinations can 
 
 This will show the 5 best scaled fitness function in the same graph as seen below:
 
-.. figure:: graph_eniigma_top_five_scaled.pdf
+.. figure:: /PNG_figs/graph_eniigma_top_five_scaled.png
     :width: 500px
     :align: center
     :height: 400px
@@ -112,7 +112,7 @@ Other checking options are available via this command:
 
 The figure below shows the evolution of the combination that gave the best solution, namely - 78.
 
-.. figure:: graph_eniigma_evol.pdf
+.. figure:: /PNG_figs/graph_eniigma_evol.png
     :width: 500px
     :align: center
     :height: 400px
@@ -129,7 +129,7 @@ The population evolution can also be check over the generations and fitness func
 
 The result is shown below:
 
-.. figure:: graph_eniigma.pdf
+.. figure:: /PNG_figs/graph_eniigma.png
     :width: 500px
     :align: center
     :height: 400px
@@ -147,7 +147,7 @@ The recurrence of the ice laboratory inside the confidence intervals can be addr
 	>>> from ENIIGMA.Stats import Pie_chart_plots
 	>>> Pie_chart_plots.pie(sig_level=9.)
 
-.. figure:: Pie_chart.pdf
+.. figure:: /PNG_figs/Pie_chart.png
     :width: 600px
     :align: center
     :height: 400px
@@ -167,7 +167,7 @@ The confidence intervals can be visualised along with the spectral decomposition
 	>>> from ENIIGMA.Stats import Stats_Module
 	>>> Stats_Module.stat(f_sig=2)
 
-.. figure:: Stats-1.pdf
+.. figure:: /PNG_figs/Stats-1.png
     :width: 500px
     :align: center
     :height: 400px
@@ -176,7 +176,7 @@ The confidence intervals can be visualised along with the spectral decomposition
 
     Triangle plot showing the confidence intervals.
 
-.. figure:: Stats-2.pdf
+.. figure:: /PNG_figs/Stats-2.png
     :width: 500px
     :align: center
     :height: 400px
@@ -185,7 +185,7 @@ The confidence intervals can be visualised along with the spectral decomposition
 
     Optical depth and the minimum and maximum intervals.
 
-.. figure:: Stats-3.pdf
+.. figure:: /PNG_figs/Stats-3.png
     :width: 550px
     :align: center
     :height: 400px
