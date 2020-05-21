@@ -30,15 +30,15 @@ Citing ENIIGMA
 
 If you use ENIIGMA code in your work, please cite Rocha et al. (in prep).
 
-Citing ENIIGMA
+Contact
 ------------
 
-If you have questions or concerns regarding the code, please open an issue at https://github.com/willastro/ENIIGMA-code/issues.
+If you have questions or concerns regarding the code, please open an issue at https://github.com/willastro/ENIIGMA-code/issues or send an email to willrobsonastro@gmail.com.
 
 The ENIIGMA team
 ----------------
 
-* Will Rocha (willrobsonastro@gmail.com)
+* Will Rocha
 * Giulia Perotti
 * Lars E. Kristensen
 * Jes K. Jørgensen
