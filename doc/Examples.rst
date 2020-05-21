@@ -30,7 +30,7 @@ The results are shown below:
     :alt: alternate text
     :figclass: align-center
 
-    Continuum SED, SVS4-9 spectrum on the top panel, the optical depth on the bottom panel.
+    Figure 1: Continuum SED, SVS4-9 spectrum on the top panel, the optical depth on the bottom panel.
 
 As you can note, the function fails to trace the continuum in the near-IR regime, althout it gives an acceptable continuum in the L-band interval. Below the same
 procedure is repeated using the blackbody function.
@@ -54,7 +54,7 @@ the temperature of 1000 K and a scale factor of 1e-20. The results are shown bel
     :alt: alternate text
     :figclass: align-center
 
-    Continuum SED, SVS4-9 spectrum on the top panel, the optical depth on the bottom panel.
+    Figure 2: Continuum SED, SVS4-9 spectrum on the top panel, the optical depth on the bottom panel.
     
 
 
@@ -83,7 +83,7 @@ In my laptop, 156 combinations were tested in a execution time of 75 seconds. Th
     :alt: alternate text
     :figclass: align-center
 
-    SVS 4-9 optical depth in black and the fitting model in green.
+    Figure 3: SVS 4-9 optical depth in black and the fitting model in green.
 
 Checking out the GA fitness evolution
 ---------------------------------------------------------------
@@ -102,7 +102,7 @@ This will show the 5 best scaled fitness function in the same graph as seen belo
     :alt: alternate text
     :figclass: align-center
 
-    GA evolution check.
+    Figure 4: GA evolution check.
 
 Other checking options are available via this command:
 ::
@@ -119,7 +119,7 @@ The figure below shows the evolution of the combination that gave the best solut
     :alt: alternate text
     :figclass: align-center
 
-    GA evolution check for the best combination.
+    Figure 5: GA evolution check for the best combination.
 
 The population evolution can also be check over the generations and fitness function as follows:
 ::
@@ -136,7 +136,7 @@ The result is shown below:
     :alt: alternate text
     :figclass: align-center
 
-    Population check for the best combination.
+    Figure 6: Population check for the best combination.
 
 
 Evaluating the recurrence of the ice components
@@ -154,7 +154,7 @@ The recurrence of the ice laboratory inside the confidence intervals can be addr
     :alt: alternate text
     :figclass: align-center
 
-    Pie charts of the recurrence plots.
+    Figure 7: Pie charts of the recurrence plots.
 
 The values are given in percentage and means how many time a specific data was repeated in order to contribute to the selected confidence interval.
 
@@ -174,7 +174,7 @@ The confidence intervals can be visualised along with the spectral decomposition
     :alt: alternate text
     :figclass: align-center
 
-    Triangle plot showing the confidence intervals.
+    Figure 8: Triangle plot showing the confidence intervals.
 
 .. figure:: PNG_figs/Stats-2.png
     :width: 500px
@@ -183,7 +183,7 @@ The confidence intervals can be visualised along with the spectral decomposition
     :alt: alternate text
     :figclass: align-center
 
-    Optical depth and the minimum and maximum intervals.
+    Figure 9: Optical depth and the minimum and maximum intervals.
 
 .. figure:: PNG_figs/Stats-3.png
     :width: 550px
@@ -192,5 +192,5 @@ The confidence intervals can be visualised along with the spectral decomposition
     :alt: alternate text
     :figclass: align-center
 
-    Optical depth decomposition indicating the used experimental data.
+    Figure 10: Optical depth decomposition indicating the used experimental data.
 
