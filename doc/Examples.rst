@@ -3,7 +3,7 @@
 Examples
 ===============================================================
 
-In this short tutorial is shown the results of the ENIIGMA code applied to the YSO SVS 4-9, located in the SVS4 cluster at the Serpens molecular cloud.
+In this short tutorial is shown the results of the ENIIGMA code applied to the YSO SVS 4-9, located in the SVS4 cluster in the Serpens molecular cloud.
 
 The L-band spectrum data was taken from the VLT-ISAAC public database via `this link <http://www.stsci.edu/~pontoppi/ISAAC_ARCHIVE_PUBLIC.tar.gz>`_. The near-IR
 photometric data is available in the `2MASS catalog <https://irsa.ipac.caltech.edu/Missions/2mass.html>`_.
