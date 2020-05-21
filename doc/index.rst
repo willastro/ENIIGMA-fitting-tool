@@ -38,7 +38,7 @@ If you have questions or concerns regarding the code, please open an issue at ht
 The ENIIGMA team
 ----------------
 
-* Will Rocha
+* Will Rocha (willrobsonastro@gmail.com)
 * Giulia Perotti
 * Lars E. Kristensen
 * Jes K. Jørgensen
