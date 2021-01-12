@@ -20,7 +20,7 @@ exit()
 filename = 'Optical_depth_svs_49.od'
 list_sp = ['H2O_40K', 'CH3OH', 'HNCO_NH3'] #guess list
 
-#optimize.ENIIGMA(filename, 2.9, 4., list_sp, group_comb=3, skip=False, ga_max = 1.0, gen=200, mutp = 0.05, popsize = 150, fitness='rmse')
+#optimize.ENIIGMA(filename, 2.9, 4., list_sp, group_comb=3, skip=True, ga_max = 1.0, gen=200, mutp = 0.05, popsize = 150, fitness='rmse')
 
 #exit()
 #Statistic of generations for each combinations
