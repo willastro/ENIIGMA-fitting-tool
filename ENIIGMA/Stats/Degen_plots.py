@@ -162,7 +162,7 @@ def merge_components_cd(dir=os.getcwd() + '/'):
 
         n = n + 1
 
-    from ENIIGMAt.Statst import deconvolutiont as dcv
+    from ENIIGMA.Stats import deconvolution as dcv
     from ENIIGMA.Stats.Merge_colden import mergecd_no_bp
 
     pathdir = dir + '/'
