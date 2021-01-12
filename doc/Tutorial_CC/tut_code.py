@@ -15,7 +15,7 @@ filename = DIR+'svs_49.txt'
 #Fit.Continuum_poly(filename, 1.24, 4.0, order = 2., range_limits=[[1.24, 2.85], [3.8, 4.]])
 #Fit.Continuum_BB(filename, 1.2, 4., range_limits=[[1.25, 2.5], [3.8, 4.]], guess = (1000, 1e-20), guess_view = False)
 
-#exit()
+exit()
 
 filename = 'Optical_depth_svs_49.od'
 list_sp = ['H2O_40K', 'CH3OH', 'HNCO_NH3'] #guess list
@@ -37,5 +37,5 @@ list_sp = ['H2O_40K', 'CH3OH', 'HNCO_NH3'] #guess list
 
 
 #Check components and create histogram
-Degen_plots.merge_components_cd()
-Degen_plots.hist_plot()
+#Degen_plots.merge_components_cd()
+#Degen_plots.hist_plot()
