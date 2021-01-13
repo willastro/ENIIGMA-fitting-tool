@@ -943,7 +943,7 @@ def deconv_all(filecomp):
                      tot, y]))
 
             elif spn[j] == 'Fig6_OR1t':
-                print('Decomposing H2O_NH3_CO2_CH4_10_1_1_1_35K_b')
+                print('Decomposing Fig6_OR1t')
                 lam1, lam2, lam3, lam4, lam5, lam6, lam7, lam8, lam9 = 5.81, 5.92, 6.1, 6.27, 6.67, 6.81, 7.41, 7.64, 8.01
                 x1, x2, x3, x4, x5, x6, x7, x8, x9 = find_nearest(ntt, lam1), find_nearest(ntt, lam2), find_nearest(ntt,
                                                                                                                     lam3), find_nearest(
@@ -1130,6 +1130,7 @@ def deconv_all(filecomp):
                 np.savetxt('Analytic_deconv_CO2.dat', np.transpose([ntt, peak10b, peak20b, tot, y]))
 
             elif spn[j] == 'CH3CN':
+            	print('Decomposing CH3CN')
                 lam1, lam2, lam3, lam4, lam5, lam6 = 6.9, 7.1, 7.29, 9.6, 10.86, 13.17
                 x1, x2, x3, x4, x5, x6 = find_nearest(ntt, lam1), find_nearest(ntt, lam2), find_nearest(ntt,
                                                                                                         lam3), find_nearest(
@@ -1171,7 +1172,7 @@ def deconv_all(filecomp):
                 np.savetxt('Analytic_deconv_CH3CN_pure.dat',
                            np.transpose([ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, tot, y]))
 
-            elif spn[j] == 'H2O_NH3_1_0.5_c':
+            elif spn[j] == 'H2O_NH3_1_05_c':
                 print('Decomposing H2O_NH3_1_0.5_c')
                 lam1, lam2, lam3, lam4, lam5, lam6 = 5.92, 6.03, 6.75, 6.84, 6.90, 7.03
                 x1, x2, x3, x4, x5, x6 = find_nearest(ntt, lam1), find_nearest(ntt, lam2), find_nearest(ntt,
@@ -1194,7 +1195,7 @@ def deconv_all(filecomp):
                 peak40b = asym_peak_G(ntt, pars40b)
                 peak50b = asym_peak_G(ntt, pars50b)
                 peak60b = asym_peak_G(ntt, pars60b)
-                # plt.plot(ntt, peak10b, ntt, peak20b, ntt, peak30b, ntt, peak40b, ntt, peak50b, ntt, peak60b)
+                tot = peak10b + peak20b + peak30b + peak40b + peak50b + peak60b
                 P1 = scipy.integrate.trapz(peak10b, ntt_cm)
                 P2 = scipy.integrate.trapz(peak20b, ntt_cm)
                 P3 = scipy.integrate.trapz(peak30b, ntt_cm)
@@ -1213,6 +1214,8 @@ def deconv_all(filecomp):
                 Data1 = {'H2O_in_mix': N_H2O, 'NH3_in_mix': N_NH3, 'NH4_in_mix': N_NH4}
                 df1 = DataFrame(Data1, columns=['H2O_in_mix', 'NH3_in_mix', 'NH4_in_mix'], index=[0])
                 df1.to_csv('Column_density_' + 'H2O_NH3_1_0.5_c' + '.csv', index=False)
+                np.savetxt('Analytic_deconv_H2O_NH3_1_0.5_c.dat',
+                           np.transpose([ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, tot, y]))
 
             elif spn[j] == 'H2O_CH3CH2OH_20_1_15K_NASA_base':
                 guess = (
@@ -1407,7 +1410,7 @@ def deconv_all(filecomp):
                 peak40b = asym_peak_L(ntt, pars40b)
                 peak50b = asym_peak_L(ntt, pars50b)
                 peak60b = asym_peak_L(ntt, pars60b)
-                tot = peak10b + peak20b + peak30b + peak40b + peak50b + peak60b
+                # plt.plot(ntt, peak10b, ntt, peak20b, ntt, peak30b, ntt, peak40b, ntt, peak50b, ntt, peak60b)
                 P1 = scipy.integrate.trapz(peak10b, ntt_cm)
                 P2 = scipy.integrate.trapz(peak20b, ntt_cm)
                 P3 = scipy.integrate.trapz(peak30b, ntt_cm)
@@ -1426,7 +1429,6 @@ def deconv_all(filecomp):
                 Data1 = {'H2O_in_mix': N_H2O, 'NH3_in_mix': N_NH3, 'CH3OH_in_mix': N_CH3OH}
                 df1 = DataFrame(Data1, columns=['H2O_in_mix', 'NH3_in_mix', 'CH3OH_in_mix'], index=[0])
                 df1.to_csv('Column_density_' + 'H2O_CH3OH_CO_NH3_10K_NASA' + '.csv', index=False)
-                np.savetxt('Analytic_deconv_H2O_CH3OH_CO_NH3_10K_NASA', np.transpose([ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, tot, y]))
 
             elif spn[j] == 'H2O_CH3OH_CO_NH3_40K_NASA':
                 guess = (
@@ -1445,7 +1447,7 @@ def deconv_all(filecomp):
                 peak40b = asym_peak_L(ntt, pars40b)
                 peak50b = asym_peak_L(ntt, pars50b)
                 peak60b = asym_peak_L(ntt, pars60b)
-                tot = peak10b + peak20b + peak30b + peak40b + peak50b + peak60b
+                # plt.plot(ntt, peak10b, ntt, peak20b, ntt, peak30b, ntt, peak40b, ntt, peak50b, ntt, peak60b)
                 P1 = scipy.integrate.trapz(peak10b, ntt_cm)
                 P2 = scipy.integrate.trapz(peak20b, ntt_cm)
                 P3 = scipy.integrate.trapz(peak30b, ntt_cm)
@@ -1464,7 +1466,6 @@ def deconv_all(filecomp):
                 Data1 = {'H2O_in_mix': N_H2O, 'NH3_in_mix': N_NH3, 'CH3OH_in_mix': N_CH3OH}
                 df1 = DataFrame(Data1, columns=['H2O_in_mix', 'NH3_in_mix', 'CH3OH_in_mix'], index=[0])
                 df1.to_csv('Column_density_' + 'H2O_CH3OH_CO_NH3_40K_NASA' + '.csv', index=False)
-                np.savetxt('Analytic_deconv_H2O_CH3OH_CO_NH3_40K_NASA', np.transpose([ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, tot, y]))
 
             elif spn[j] == 'H2O_CH3OH_CO_NH3_80K_NASA':
                 guess = (
@@ -1483,7 +1484,7 @@ def deconv_all(filecomp):
                 peak40b = asym_peak_L(ntt, pars40b)
                 peak50b = asym_peak_L(ntt, pars50b)
                 peak60b = asym_peak_L(ntt, pars60b)
-                tot = peak10b + peak20b + peak30b + peak40b + peak50b + peak60b
+                # plt.plot(ntt, peak10b, ntt, peak20b, ntt, peak30b, ntt, peak40b, ntt, peak50b, ntt, peak60b)
                 P1 = scipy.integrate.trapz(peak10b, ntt_cm)
                 P2 = scipy.integrate.trapz(peak20b, ntt_cm)
                 P3 = scipy.integrate.trapz(peak30b, ntt_cm)
@@ -1502,7 +1503,6 @@ def deconv_all(filecomp):
                 Data1 = {'H2O_in_mix': N_H2O, 'NH3_in_mix': N_NH3, 'CH3OH_in_mix': N_CH3OH}
                 df1 = DataFrame(Data1, columns=['H2O_in_mix', 'NH3_in_mix', 'CH3OH_in_mix'], index=[0])
                 df1.to_csv('Column_density_' + 'H2O_CH3OH_CO_NH3_80K_NASA' + '.csv', index=False)
-                np.savetxt('Analytic_deconv_H2O_CH3OH_CO_NH3_80K_NASA', np.transpose([ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, tot, y]))
 
             elif spn[j] == 'H2O_CH3OH_CO_NH3_100K_NASA':
                 guess = (
@@ -1521,7 +1521,7 @@ def deconv_all(filecomp):
                 peak40b = asym_peak_L(ntt, pars40b)
                 peak50b = asym_peak_L(ntt, pars50b)
                 peak60b = asym_peak_L(ntt, pars60b)
-                tot = peak10b + peak20b + peak30b + peak40b + peak50b + peak60b
+                # plt.plot(ntt, peak10b, ntt, peak20b, ntt, peak30b, ntt, peak40b, ntt, peak50b, ntt, peak60b)
                 P1 = scipy.integrate.trapz(peak10b, ntt_cm)
                 P2 = scipy.integrate.trapz(peak20b, ntt_cm)
                 P3 = scipy.integrate.trapz(peak30b, ntt_cm)
@@ -1540,7 +1540,6 @@ def deconv_all(filecomp):
                 Data1 = {'H2O_in_mix': N_H2O, 'NH3_in_mix': N_NH3, 'CH3OH_in_mix': N_CH3OH}
                 df1 = DataFrame(Data1, columns=['H2O_in_mix', 'NH3_in_mix', 'CH3OH_in_mix'], index=[0])
                 df1.to_csv('Column_density_' + 'H2O_CH3OH_CO_NH3_100K_NASA' + '.csv', index=False)
-                np.savetxt('Analytic_deconv_H2O_CH3OH_CO_NH3_100K_NASA', np.transpose([ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, tot, y]))
 
             elif spn[j] == 'H2O_CH3OH_CO_NH3_H2_10K_NASA':
                 guess = (
@@ -1559,7 +1558,7 @@ def deconv_all(filecomp):
                 peak40b = asym_peak_L(ntt, pars40b)
                 peak50b = asym_peak_L(ntt, pars50b)
                 peak60b = asym_peak_L(ntt, pars60b)
-                tot = peak10b + peak20b + peak30b + peak40b + peak50b + peak60b
+                # plt.plot(ntt, peak10b, ntt, peak20b, ntt, peak30b, ntt, peak40b, ntt, peak50b, ntt, peak60b)
                 P1 = scipy.integrate.trapz(peak10b, ntt_cm)
                 P2 = scipy.integrate.trapz(peak20b, ntt_cm)
                 P3 = scipy.integrate.trapz(peak30b, ntt_cm)
@@ -1578,7 +1577,6 @@ def deconv_all(filecomp):
                 Data1 = {'H2O_in_mix': N_H2O, 'NH3_in_mix': N_NH3, 'CH3OH_in_mix': N_CH3OH}
                 df1 = DataFrame(Data1, columns=['H2O_in_mix', 'NH3_in_mix', 'CH3OH_in_mix'], index=[0])
                 df1.to_csv('Column_density_' + 'H2O_CH3OH_CO_NH3_H2_10K_NASA' + '.csv', index=False)
-                np.savetxt('Analytic_deconv_H2O_CH3OH_CO_NH3_H2_10K_NASA', np.transpose([ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, tot, y]))
 
             elif spn[j] == 'H2O_CH3OH_CO_NH3_H2_40K_NASA':
                 guess = (
@@ -1597,7 +1595,7 @@ def deconv_all(filecomp):
                 peak40b = asym_peak_L(ntt, pars40b)
                 peak50b = asym_peak_L(ntt, pars50b)
                 peak60b = asym_peak_L(ntt, pars60b)
-                tot = peak10b + peak20b + peak30b + peak40b + peak50b + peak60b
+                # plt.plot(ntt, peak10b, ntt, peak20b, ntt, peak30b, ntt, peak40b, ntt, peak50b, ntt, peak60b)
                 P1 = scipy.integrate.trapz(peak10b, ntt_cm)
                 P2 = scipy.integrate.trapz(peak20b, ntt_cm)
                 P3 = scipy.integrate.trapz(peak30b, ntt_cm)
@@ -1616,7 +1614,6 @@ def deconv_all(filecomp):
                 Data1 = {'H2O_in_mix': N_H2O, 'NH3_in_mix': N_NH3, 'CH3OH_in_mix': N_CH3OH}
                 df1 = DataFrame(Data1, columns=['H2O_in_mix', 'NH3_in_mix', 'CH3OH_in_mix'], index=[0])
                 df1.to_csv('Column_density_' + 'H2O_CH3OH_CO_NH3_H2_40K_NASA' + '.csv', index=False)
-                np.savetxt('Analytic_deconv_H2O_CH3OH_CO_NH3_H2_40K_NASA', np.transpose([ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, tot, y]))
 
             elif spn[j] == 'H2O_CH3OH_CO_NH3_H2_80K_NASA':
                 guess = (
@@ -1635,7 +1632,7 @@ def deconv_all(filecomp):
                 peak40b = asym_peak_L(ntt, pars40b)
                 peak50b = asym_peak_L(ntt, pars50b)
                 peak60b = asym_peak_L(ntt, pars60b)
-                tot = peak10b + peak20b + peak30b + peak40b + peak50b + peak60b
+                # plt.plot(ntt, peak10b, ntt, peak20b, ntt, peak30b, ntt, peak40b, ntt, peak50b, ntt, peak60b)
                 P1 = scipy.integrate.trapz(peak10b, ntt_cm)
                 P2 = scipy.integrate.trapz(peak20b, ntt_cm)
                 P3 = scipy.integrate.trapz(peak30b, ntt_cm)
@@ -1654,7 +1651,6 @@ def deconv_all(filecomp):
                 Data1 = {'H2O_in_mix': N_H2O, 'NH3_in_mix': N_NH3, 'CH3OH_in_mix': N_CH3OH}
                 df1 = DataFrame(Data1, columns=['H2O_in_mix', 'NH3_in_mix', 'CH3OH_in_mix'], index=[0])
                 df1.to_csv('Column_density_' + 'H2O_CH3OH_CO_NH3_H2_80K_NASA' + '.csv', index=False)
-                np.savetxt('Analytic_deconv_H2O_CH3OH_CO_NH3_H2_80K_NASA', np.transpose([ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, tot, y]))
 
             elif spn[j] == 'H2O_CH3OH_CO_NH3_H2_100K_NASA':
                 guess = (
@@ -1673,7 +1669,7 @@ def deconv_all(filecomp):
                 peak40b = asym_peak_L(ntt, pars40b)
                 peak50b = asym_peak_L(ntt, pars50b)
                 peak60b = asym_peak_L(ntt, pars60b)
-                tot = peak10b + peak20b + peak30b + peak40b + peak50b + peak60b
+                # plt.plot(ntt, peak10b, ntt, peak20b, ntt, peak30b, ntt, peak40b, ntt, peak50b, ntt, peak60b)
                 P1 = scipy.integrate.trapz(peak10b, ntt_cm)
                 P2 = scipy.integrate.trapz(peak20b, ntt_cm)
                 P3 = scipy.integrate.trapz(peak30b, ntt_cm)
@@ -1692,7 +1688,6 @@ def deconv_all(filecomp):
                 Data1 = {'H2O_in_mix': N_H2O, 'NH3_in_mix': N_NH3, 'CH3OH_in_mix': N_CH3OH}
                 df1 = DataFrame(Data1, columns=['H2O_in_mix', 'NH3_in_mix', 'CH3OH_in_mix'], index=[0])
                 df1.to_csv('Column_density_' + 'H2O_CH3OH_CO_NH3_H2_100K_NASA' + '.csv', index=False)
-                np.savetxt('Analytic_deconv_H2O_CH3OH_CO_NH3_H2_100K_NASA', np.transpose([ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, tot, y]))
 
             elif spn[j] == 'H2O_CH3OH_CO2_CH4_87K_V2':
                 guess = (
@@ -1710,7 +1705,7 @@ def deconv_all(filecomp):
                 peak40b = asym_peak_L(ntt, pars40b)
                 peak50b = asym_peak_L(ntt, pars50b)
                 peak60b = asym_peak_L(ntt, pars60b)
-                tot = peak10b + peak20b + peak30b + peak40b + peak50b + peak60b
+                # plt.plot(ntt, peak10b, ntt, peak20b, ntt, peak30b, ntt, peak40b, ntt, peak50b, ntt, peak60b)
                 P1 = scipy.integrate.trapz(peak10b, ntt_cm)
                 P2 = scipy.integrate.trapz(peak20b, ntt_cm)
                 P3 = scipy.integrate.trapz(peak30b, ntt_cm)
@@ -1729,7 +1724,6 @@ def deconv_all(filecomp):
                 Data1 = {'H2O_in_mix': N_H2O, 'CH4_in_mix': N_CH4, 'CH3OH_in_mix': N_CH3OH}
                 df1 = DataFrame(Data1, columns=['H2O_in_mix', 'CH4_in_mix', 'CH3OH_in_mix'], index=[0])
                 df1.to_csv('Column_density_' + 'H2O_CH3OH_CO2_CH4_87K_V2' + '.csv', index=False)
-                np.savetxt('Analytic_deconv_H2O_CH3OH_CO2_CH4_87K_V2', np.transpose([ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, tot, y]))
 
             elif spn[j] == 'CO_NH3_10K':
                 lam1, lam2 = 6.0, 6.56
@@ -2254,6 +2248,7 @@ def deconv_all(filecomp):
                            np.transpose([ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, tot, y]))
 
             elif spn[j] == 'HCOOH_30.0K':
+            	print('Decomposing HCOOH at 30K')
                 lam1, lam2, lam3, lam4, lam5, lam6, lam7, lam8, lam9 = 5.85, 6.12, 7.23, 8.2, 8.53, 9.35, 10.7, 11.7, 14.6
                 x1, x2, x3, x4, x5, x6, x7, x8, x9 = find_nearest(ntt, lam1), find_nearest(ntt, lam2), find_nearest(ntt,
                                                                                                                     lam3), find_nearest(
@@ -2266,6 +2261,10 @@ def deconv_all(filecomp):
                 guess = (
                 y1, x1, 0.01, y2, x2, 0.05, y3, x3, 0.03, y4, x4, 0.03, y5, x5, 0.05, y6, x6, 0.01, y7, x7, 0.05, y8,
                 x8, 0.05, y9, x9, 0.05)
+                plt.plot(ntt, nine_peaks_G(ntt, *guess),'g-')
+                plt.plot(ntt,y)
+                plt.show()
+                
                 popt, pcov = curve_fit(nine_peaks_G, ntt, y, guess, maxfev=5000)
                 pars10b = popt[0:3]
                 pars20b = popt[3:6]
@@ -2529,6 +2528,7 @@ def deconv_all(filecomp):
 
 
             elif spn[j] == 'NH4NO3_200K':
+            	print('Decomposing NH4NO3_200K')
                 lam1, lam2, lam3, lam4, lam5, lam6, lam7 = 5.96, 6.16, 6.89, 7.47, 8.34, 11.19, 12.3
                 x1, x2, x3, x4, x5, x6, x7 = find_nearest(ntt, lam1), find_nearest(ntt, lam2), find_nearest(ntt,
                                                                                                             lam3), find_nearest(
@@ -2580,8 +2580,70 @@ def deconv_all(filecomp):
                 np.savetxt('Analytic_deconv_NH4NO3_200K.dat',
                            np.transpose([ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, peak70b, tot, y]))
             # """
-
+            
+            elif spn[j] == 'NH3_CH3OH_S':
+            	print('Decomposing NH3_CH3OH_S')
+                lam1, lam2, lam3, lam4, lam5, lam6, lam7, lam8 = 6.1, 6.6, 6.86, 7.08, 8.85, 9.51, 9.72, 9.91
+                x1, x2, x3, x4, x5, x6, x7, x8 = find_nearest(ntt, lam1), find_nearest(ntt, lam2), find_nearest(ntt,
+                                                                                                                lam3), find_nearest(
+                    ntt, lam4), find_nearest(ntt, lam5), find_nearest(ntt, lam6), find_nearest(ntt, lam7), find_nearest(
+                    ntt, lam8)
+                y1, y2, y3, y4, y5, y6, y7, y8 = y[get_line_number2(x1, ntt)], y[get_line_number2(x2, ntt)], y[
+                    get_line_number2(x3, ntt)], y[get_line_number2(x4, ntt)], y[get_line_number2(x5, ntt)], y[
+                                                     get_line_number2(x6, ntt)], y[get_line_number2(x7, ntt)], y[
+                                                     get_line_number2(x8, ntt)]
+                guess = (
+                y1, x1, 0.04, y2, x2, 0.04, y3, x3, 0.04, y4, x4, 0.04, y5, x5, 0.01, y6, x6, 0.01, y7, x7, 0.01, y8, x8,
+                0.01)
+                popt, pcov = curve_fit(eight_peaks_G, ntt, y, guess, maxfev=5000)
+                # plt.plot(ntt, eight_peaks_L(ntt, *guess),'g-')
+                # plt.plot(ntt,y)
+                # plt.show()
+                # """
+                pars10b = popt[0:3]
+                pars20b = popt[3:6]
+                pars30b = popt[6:9]
+                pars40b = popt[9:12]
+                pars50b = popt[12:15]
+                pars60b = popt[15:18]
+                pars70b = popt[18:21]
+                pars80b = popt[21:24]
+                peak10b = asym_peak_G(ntt, pars10b)
+                peak20b = asym_peak_G(ntt, pars20b)
+                peak30b = asym_peak_G(ntt, pars30b)
+                peak40b = asym_peak_G(ntt, pars40b)
+                peak50b = asym_peak_G(ntt, pars50b)
+                peak60b = asym_peak_G(ntt, pars60b)
+                peak70b = asym_peak_G(ntt, pars70b)
+                peak80b = asym_peak_G(ntt, pars80b)
+                tot = peak10b + peak20b + peak30b + peak40b + peak50b + peak60b + peak70b + peak80b
+                P1 = scipy.integrate.trapz(peak10b, ntt_cm)
+                P2 = scipy.integrate.trapz(peak20b, ntt_cm)
+                P3 = scipy.integrate.trapz(peak30b, ntt_cm)
+                P4 = scipy.integrate.trapz(peak40b, ntt_cm)
+                P5 = scipy.integrate.trapz(peak50b, ntt_cm)
+                P6 = scipy.integrate.trapz(peak60b, ntt_cm)
+                P7 = scipy.integrate.trapz(peak70b, ntt_cm)
+                P8 = scipy.integrate.trapz(peak80b, ntt_cm)
+                N1 = 0.	 #-P1 / A_NH3_2
+                N2 = 0.  # -P2/A_NH4
+                N3 = 0.  # -P3/A_CH3OH
+                N4 = 0.  # -P4/A_CH3OH
+                N5 = -P5/A_NH3
+                N6 = -P6/A_CH3OH
+                N7 = -P7/A_CH3OH
+                N8 = -P8/A_CH3OH
+                N_NH3 = N5+0.4*N8
+                N_CH3OH = N6+N7+0.6*N8
+                Data1 = {'NH3_in_mix': N_NH3, 'CH3OH_in_mix': N_CH3OH}
+                df1 = DataFrame(Data1, columns=['NH3_in_mix', 'CH3OH_in_mix'], index=[0])
+                df1.to_csv('Column_density_' + 'NH3_CH3OH_S' + '.csv', index=False)
+                np.savetxt('Analytic_deconv_NH3_CH3OH_S.dat', np.transpose(
+                    [ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, peak70b, peak80b, tot, y]))
+			
+			
             elif spn[j] == 'NH3_CH3OH_50_10K':
+            	print('Decomposing NH3_CH3OH_50_10K')
                 lam1, lam2, lam3, lam4, lam5, lam6, lam7, lam8 = 6.13, 6.65, 6.86, 6.95, 8.82, 9.24, 9.72, 10.88
                 x1, x2, x3, x4, x5, x6, x7, x8 = find_nearest(ntt, lam1), find_nearest(ntt, lam2), find_nearest(ntt,
                                                                                                                 lam3), find_nearest(
@@ -2642,6 +2704,7 @@ def deconv_all(filecomp):
             # """
 
             elif spn[j] == 'd_NH3_CH3OH_50_10K_I10m_Baselined':
+            	print('Decomposing d_NH3_CH3OH_50_10K_I10m_Baselined')
                 lam1, lam2, lam3, lam4, lam5, lam6, lam7, lam8 = 6.13, 6.65, 6.86, 6.95, 8.82, 9.24, 9.72, 10.88
                 x1, x2, x3, x4, x5, x6, x7, x8 = find_nearest(ntt, lam1), find_nearest(ntt, lam2), find_nearest(ntt,
                                                                                                                 lam3), find_nearest(
@@ -2697,6 +2760,7 @@ def deconv_all(filecomp):
                     [ntt, peak10b, peak20b, peak30b, peak40b, peak50b, peak60b, peak70b, peak80b, tot, y]))
 
             elif spn[j] == 'H2O_NH3_CO_1.0_0.6_0.4_c':
+            	print('Decomposing H2O_NH3_CO_1.0_0.6_0.4_c')
                 lam1, lam2, lam3, lam4, lam5, lam6, lam7, lam8, lam9, lam10 = 5.94, 6.11, 6.73, 6.96, 7.25, 7.50, 8.95, 10.97, 12.21, 13.7
                 x1, x2, x3, x4, x5, x6, x7, x8, x9, x10 = find_nearest(ntt, lam1), find_nearest(ntt,
                                                                                                 lam2), find_nearest(ntt,
