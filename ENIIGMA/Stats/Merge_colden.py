@@ -183,7 +183,7 @@ def mergecd_max(filename, pathdir):
     df2 = df1.groupby(['Label']).sum()
     df2.to_csv('MergeCD4_max.csv', index=True)
 
-    t = pd.read_csv(pathdir + 'MergeCD4_min.csv', sep=',')
+    t = pd.read_csv(pathdir + 'MergeCD4_max.csv', sep=',')
     sp = t['Label']
     CDmix = t['CDinmix']
     CDpure = t['CDpure']
