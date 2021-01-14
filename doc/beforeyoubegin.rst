@@ -25,7 +25,7 @@ Installation:
 The installation can be done by typing the following command in shell:
 ::
 
-	$pip install -i https://test.pypi.org/simple/ eniigma-try12==0.0.1
+	$pip install -i https://test.pypi.org/simple/ eniigma-try007==0.0.1
 
 .. note:: Obs: Pyevolve in Python 3+ must be downloaded and installed via the following commands:
 ::
