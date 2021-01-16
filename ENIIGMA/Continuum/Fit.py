@@ -215,7 +215,7 @@ def Continuum_poly(filename, xmin, xmax, order=2, range_limits=None):
 	#=================Input Parameters ====================================
 	
 	#=================Input Parameters ====================================
-	DIR = os.getcwd() + '/'
+	
 	files = glob.glob(filename)
 	
 	count = 0
@@ -223,7 +223,7 @@ def Continuum_poly(filename, xmin, xmax, order=2, range_limits=None):
 	i = len(files)
 		
 	for index in range(i):
-		name = files[index][len(DIR):]
+		name = files[index].rsplit('/', 1)[1]
 		t = np.loadtxt(files[index]).T
 		x_lam = t[0]
 		x_nu = cl/(x_lam*1e-6)
@@ -382,7 +382,7 @@ def Continuum_BB(filename, xmin, xmax, range_limits=None, guess = (500, 1e-18, 2
 	#=================Input Parameters ====================================
 	
 	#=================Input Parameters ====================================
-	DIR = os.getcwd() + '/'
+	
 	files = glob.glob(filename)
 	
 	count = 0
@@ -390,7 +390,7 @@ def Continuum_BB(filename, xmin, xmax, range_limits=None, guess = (500, 1e-18, 2
 	i = len(files)
 		
 	for index in range(i):
-		name = files[index][len(DIR):]
+		name = files[index].rsplit('/', 1)[1]
 		t = np.loadtxt(files[index]).T
 		x_lam = t[0]
 		x_nu = cl/(x_lam*1e-6)
