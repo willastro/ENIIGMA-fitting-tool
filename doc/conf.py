@@ -19,7 +19,7 @@ master_doc = 'index'
 
 # -- Project information -----------------------------------------------------
 
-project = 'ENIIGMA code'
+project = 'ENIIGMA fitting tool'
 copyright = '2020, ENIIGMA Team'
 author = 'ENIIGMA Team'
 
