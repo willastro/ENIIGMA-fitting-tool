@@ -28,7 +28,7 @@ have been successfully tested. In this regard, this code will be useful to provi
 Citing ENIIGMA
 ------------
 
-If you use ENIIGMA fitting tool in your work, please cite Rocha et al. (in prep).
+If you use ENIIGMA fitting tool in your work, please cite `Rocha et al. (2021) <https://www.aanda.org/articles/aa/pdf/forth/aa39360-20.pdf>`_.
 
 Contact
 ------------
