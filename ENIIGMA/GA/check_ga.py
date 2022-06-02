@@ -19,12 +19,37 @@ def top_five_raw(savepdf = False):
 	
 	    
 	"""
-	DIR = os.getcwd()
-	DIR2 = '/Workspace/Processing/Interp_proc/'
-	os.chdir(DIR+DIR2)
+	#DIR = os.getcwd()
+	#DIR2 = '/Workspace/Processing/Interp_proc/'
+	#os.chdir(DIR+DIR2)
 	
-	file = 'comb_score.txt'
-	t = pd.read_csv(DIR+DIR2+file,sep='\s+', header=None)
+	#file = 'comb_score.txt'
+	#t = pd.read_csv(DIR+DIR2+file,sep='\s+', header=None)
+	
+	ipy_str = str(type(get_ipython()))
+	if 'zmqshell' in ipy_str:
+	  print('jupyter')
+	  DIR = os.getcwd()
+	  DIR2 = '/Workspace/Processing/Interp_proc/'
+	  if 'Interp_proc' in DIR:
+	    os.chdir(DIR)
+	    file = '/comb_score.txt'
+	    t = pd.read_csv(DIR+file,sep='\s+', header=None)
+	  else:
+	    os.chdir(DIR + DIR2)
+	    file = 'comb_score.txt'
+	    t = pd.read_csv(DIR+DIR2+file,sep='\s+', header=None)
+	  print(DIR)
+	  #file = 'comb_score.txt'
+	  #t = pd.read_csv(DIR+DIR2+file,sep='\s+', header=None)
+	else:
+	 #print('terminal')
+	 DIR = os.getcwd()
+	 DIR2 = '/Workspace/Processing/Interp_proc/'
+	 os.chdir(DIR+DIR2)
+	 file = 'comb_score.txt'
+	 t = pd.read_csv(DIR+DIR2+file,sep='\s+', header=None)
+	
 	t = t.sort_values(t.columns[0])
 	best = t.T.values.tolist()[1]
 	
@@ -57,12 +82,33 @@ def top_five_scaled(savepdf=False):
 	
 	    
 	"""
-	DIR = os.getcwd()
-	DIR2 = '/Workspace/Processing/Interp_proc/'
-	os.chdir(DIR+DIR2)
 	
-	file = 'comb_score.txt'
-	t = pd.read_csv(DIR+DIR2+file,sep='\s+', header=None)
+	ipy_str = str(type(get_ipython()))
+	if 'zmqshell' in ipy_str:
+	  print('jupyter')
+	  DIR = os.getcwd()
+	  DIR2 = '/Workspace/Processing/Interp_proc/'
+	  if 'Interp_proc' in DIR:
+	    os.chdir(DIR)
+	    file = '/comb_score.txt'
+	    t = pd.read_csv(DIR+file,sep='\s+', header=None)
+	  else:
+	    os.chdir(DIR + DIR2)
+	    file = 'comb_score.txt'
+	    t = pd.read_csv(DIR+DIR2+file,sep='\s+', header=None)
+	  print(DIR)
+	  #file = 'comb_score.txt'
+	  #t = pd.read_csv(DIR+DIR2+file,sep='\s+', header=None)
+	else:
+	 print('terminal')
+	 DIR = os.getcwd()
+	 DIR2 = '/Workspace/Processing/Interp_proc/'
+	 os.chdir(DIR+DIR2)
+	 file = 'comb_score.txt'
+	 t = pd.read_csv(DIR+DIR2+file,sep='\s+', header=None)
+	
+	#file = 'comb_score.txt'
+	#t = pd.read_csv(DIR+DIR2+file,sep='\s+', header=None)
 	t = t.sort_values(t.columns[0])
 	best = t.T.values.tolist()[1]
 	
@@ -74,6 +120,7 @@ def top_five_scaled(savepdf=False):
 	
 	if savepdf == False:
 		string_c = 'pyevolve_graph.py -i'+' '+'eniigma_'+str(int(b1))+','+'eniigma_'+str(int(b2))+',''eniigma_'+str(int(b3))+',''eniigma_'+str(int(b4))+',''eniigma_'+str(int(b5))+' '+'-7'	
+		print(string_c)
 		os.system(string_c)
 	else:
 		string_c = 'pyevolve_graph.py -i'+' '+'eniigma_'+str(int(b1))+','+'eniigma_'+str(int(b2))+',''eniigma_'+str(int(b3))+',''eniigma_'+str(int(b4))+',''eniigma_'+str(int(b5))+' '+'-7'+' '+'-o'+' '+'graph_eniigma_top_five_scaled'+' '+'-e'+' '+'pdf'	
@@ -118,9 +165,19 @@ def check(combination=1, option=-1, savepdf = False):
 	
 	    
 	"""
-	DIR = os.getcwd()
-	DIR2 = '/Workspace/Processing/Interp_proc/'
-	os.chdir(DIR+DIR2)
+	ipy_str = str(type(get_ipython()))
+	if 'zmqshell' in ipy_str:
+	  #print('jupyter')
+	  DIR = os.getcwd()
+	  DIR2 = '/Workspace/Processing/Interp_proc/'
+	  if 'Interp_proc' in DIR:
+	    os.chdir(DIR)
+	  else:
+	    os.chdir(DIR + DIR2)
+	
+	#DIR = os.getcwd()
+	#DIR2 = '/Workspace/Processing/Interp_proc/'
+	#os.chdir(DIR+DIR2)
 	
 	if savepdf == False:
 		string_c = 'pyevolve_graph.py -i'+' '+'eniigma_'+str(combination)+' '+str(option)+' '+'-m'	
