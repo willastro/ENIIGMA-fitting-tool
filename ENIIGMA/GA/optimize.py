@@ -183,6 +183,7 @@ def ENIIGMA(od_file, xmin, xmax, list_sp, n_points=500, group_comb=5, skip=False
     print('=================================================================')
 
     DIR = os.getcwd() + '/'
+    print('DIR:',DIR)
 
     if os.path.isdir(DIR + 'Workspace') == False:
         os.makedirs('Workspace')
@@ -780,6 +781,7 @@ def ENIIGMA(od_file, xmin, xmax, list_sp, n_points=500, group_comb=5, skip=False
         plt.xlabel(r'$\lambda\ \mathrm{[\mu m]}$', fontsize=10)
 
         plt.savefig(DIR + 'Final_plot.pdf')
+        os.chdir('../../../')
 
         toc = time.time()
 
@@ -917,6 +919,7 @@ def ENIIGMA(od_file, xmin, xmax, list_sp, n_points=500, group_comb=5, skip=False
         plt.xlabel(r'$\lambda\ \mathrm{[\mu m]}$', fontsize=10)
 
         plt.savefig(DIR + 'Final_plot.pdf')
+        os.chdir('../../../')
 
         toc = time.time()
 
